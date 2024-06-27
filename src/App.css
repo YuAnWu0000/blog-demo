@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding: 10px;
 }
 
 .App-logo {
@@ -35,4 +36,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* scss */
+.button {
+  width: 120px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  background-color: black;
+}
+.button-primary {
+  font-weight: bold;
+  background-color: green;
+  border-radius: 10px;
+}
+.button-big {
+  width: 200px;
+  height: 50px;
+}
+.button-disable {
+  pointer-events: none;
+}
+.hidden {
+  display: none;
+}
+.button-special {
+  color: blue;
+  background-color: red;
+  display: block;
 }
