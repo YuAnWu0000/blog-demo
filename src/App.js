@@ -1,26 +1,13 @@
 import './App.css'
-// import MyButton from './components/ButtonCssModule'
-// import MyButton from './components/ButtonStyledComponent'
-import MyButton from './components/ButtonCssProp'
-// import MyButton from './components/ButtonTailwind'
+// import MyButton from './components/cssFramework/ButtonCssModule'
+// import MyButton from './components/cssFramework/ButtonStyledComponent'
+import MyButton from './components/cssFramework/ButtonCssProp'
+// import MyButton from './components/cssFramework/ButtonTailwind'
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      {/* CSS module */}
       {/* <MyButton
         variant="primary"
         size="big"
@@ -29,6 +16,7 @@ function App() {
         color="yellow"
         className="button-special"
       /> */}
+      {/* css-in-js */}
       <MyButton
         variant="primary"
         size="big"
@@ -41,6 +29,7 @@ function App() {
           display: 'block'
         }}
       />
+      {/* Tailwind CSS */}
       {/* <MyButton
         variant="primary"
         size="big"
