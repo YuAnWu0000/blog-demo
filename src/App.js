@@ -1,12 +1,13 @@
 import './App.css'
 // import MyButton from './components/cssFramework/ButtonCssModule'
 // import MyButton from './components/cssFramework/ButtonStyledComponent'
-import MyButton from './components/cssFramework/ButtonCssProp'
+// import MyButton from './components/cssFramework/ButtonCssProp'
+// import MyButton from './components/cssFramework/ButtonTailwind'
 // import MyButton from './components/cssFramework/ButtonTailwind'
 
 function App() {
   return (
-    <div className="App">
+    <div className="h-screen bg-[url('/images/cat.jpg')] bg-contain bg-no-repeat">
       {/* CSS module */}
       {/* <MyButton
         variant="primary"
@@ -17,7 +18,7 @@ function App() {
         className="button-special"
       /> */}
       {/* css-in-js */}
-      <MyButton
+      {/* <MyButton
         variant="primary"
         size="big"
         isDisable={false}
@@ -28,7 +29,7 @@ function App() {
           backgroundColor: 'red',
           display: 'block'
         }}
-      />
+      /> */}
       {/* Tailwind CSS */}
       {/* <MyButton
         variant="primary"
