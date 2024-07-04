@@ -60,6 +60,18 @@
           }
         }
       }
+
+      &:nth-child(2) {
+        transform: rotate(calc(180deg + 360deg / $spanNum));
+        @for $i from 0 to $spanNum {
+          .span#{$i} {
+            @include span($i);
+            &::after {
+              animation-delay: calc(-0.1s * $i);
+            }
+          }
+        }
+      }
     }
   }
 
