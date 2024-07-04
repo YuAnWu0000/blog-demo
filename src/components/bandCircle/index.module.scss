@@ -9,6 +9,14 @@
   $circleWidth: 154px;
   $dotWidth: 16px;
 
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: changeColor 8s linear infinite;
+  }
+
   @keyframes animate {
     0% {
       transform: scale(1);
