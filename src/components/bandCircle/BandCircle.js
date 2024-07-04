@@ -12,6 +12,11 @@ const BandCircle = () => {
             return <span key={index} className={styles[`span${index}`]}></span>
           })}
         </div>
+        <div className={styles.circle}>
+          {list.map((item, index) => {
+            return <span key={index} className={styles[`span${index}`]}></span>
+          })}
+        </div>
       </div>
     </div>
   )
