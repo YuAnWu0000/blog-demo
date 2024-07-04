@@ -9,5 +9,11 @@ module.exports = function override(config) {
     .oneOf.find((r) => r.test.toString() === targetRegex.toString())
     .use.find((o) => o.loader && targetPackage.test(o.loader)).options.url =
     false
+
+  //add alias
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    '@': path.resolve(__dirname, './src')
+  }
   return config
 }
