@@ -51,6 +51,15 @@
           animation-delay: calc(0.1s * $i);
         }
       }
+
+      $spanNum: 20;
+      &:nth-child(1) {
+        @for $i from 0 to $spanNum {
+          .span#{$i} {
+            @include span($i);
+          }
+        }
+      }
     }
   }
 
