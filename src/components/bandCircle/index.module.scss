@@ -15,6 +15,13 @@
     align-items: center;
     position: relative;
     animation: changeColor 8s linear infinite;
+    .circle {
+      width: $circleWidth;
+      height: $circleWidth;
+      margin: 0 calc($dotWidth / -2);
+      background-color: transparent;
+      position: relative;
+    }
   }
 
   @keyframes animate {
