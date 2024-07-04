@@ -29,6 +29,27 @@
         width: 100%;
         height: 100%;
         transform: rotate(calc((360deg / $spanNum) * $i));
+
+        &::after {
+          content: '';
+          width: $dotWidth;
+          height: $dotWidth;
+          position: absolute;
+          right: 0;
+          top: calc(50% - ($dotWidth / 2));
+          background-color: #00ff0a;
+          border-radius: 50%;
+          box-shadow:
+            0 0 10px #00ff0a,
+            0 0 20px #00ff0a,
+            0 0 40px #00ff0a,
+            0 0 60px #00ff0a,
+            0 0 80px #00ff0a,
+            0 0 100px #00ff0a;
+          transform: scale(0.1);
+          animation: animate 4s linear infinite;
+          animation-delay: calc(0.1s * $i);
+        }
       }
     }
   }
