@@ -1,9 +1,8 @@
-import './App.css'
-// import MyButton from './components/cssFramework/ButtonCssModule'
-// import MyButton from './components/cssFramework/ButtonStyledComponent'
-// import MyButton from './components/cssFramework/ButtonCssProp'
-// import MyButton from './components/cssFramework/ButtonTailwind'
-// import MyButton from './components/cssFramework/ButtonTailwind'
+import '@/App.css'
+// import MyButton from '@/components/cssFramework/ButtonCssModule'
+// import MyButton from '@/components/cssFramework/ButtonStyledComponent'
+// import MyButton from '@/components/cssFramework/ButtonCssProp'
+import MyButton from '@/components/cssFramework/ButtonTailwind'
 
 function App() {
   return (
@@ -31,13 +30,13 @@ function App() {
         }}
       /> */}
       {/* Tailwind CSS */}
-      {/* <MyButton
+      <MyButton
         variant="primary"
         size="big"
         isDisable={false}
         isHidden={true}
         className="text-blue-500 bg-red-500 block"
-      /> */}
+      />
     </div>
   )
 }
