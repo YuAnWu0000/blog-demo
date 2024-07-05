@@ -1,0 +1,6 @@
+.pivot {
+  right: 50%;
+  & ~ div {
+    right: 50%;
+  }
+}
