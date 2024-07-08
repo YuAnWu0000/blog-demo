@@ -39,9 +39,9 @@ module.exports = {
         }
       },
       animation: {
-        puzzle: 'puzzle 1s ease-in-out forwards',
-        pivotPuzzle: 'pivotPuzzle 2s ease-in-out forwards',
-        translateX: 'translateX 2s ease-in-out forwards'
+        puzzle: 'puzzle 1s ease-out forwards',
+        pivotPuzzle: 'pivotPuzzle 2s ease-out forwards',
+        translateX: 'translateX 0.9s ease-out forwards'
       }
     }
   },

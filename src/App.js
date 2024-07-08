@@ -3,11 +3,12 @@ import '@/App.css'
 // import MyButton from '@/components/cssFramework/ButtonStyledComponent'
 // import MyButton from '@/components/cssFramework/ButtonCssProp'
 // import MyButton from '@/components/cssFramework/ButtonTailwind'
-import BandCircle from '@/components/bandCircle/BandCircle'
+// import BandCircle from '@/components/bandCircle/BandCircle'
+import RamenPuzzle from '@/components/ramenPuzzle/RamenPuzzle'
 
 function App() {
   return (
-    <div className="h-screen bg-[url('/images/cat.jpg')] bg-contain bg-repeat">
+    <div className="h-screen bg-[url('/images/cat.jpg')] bg-contain bg-repeat bg-none">
       {/* CSS module */}
       {/* <MyButton
         variant="primary"
@@ -38,7 +39,8 @@ function App() {
         isHidden={true}
         className="text-blue-500 bg-red-500 block"
       /> */}
-      <BandCircle />
+      {/* <BandCircle /> */}
+      <RamenPuzzle />
     </div>
   )
 }
