@@ -36,12 +36,21 @@ module.exports = {
           '100%': {
             transform: 'translateX(var(--translateX))'
           }
+        },
+        marquee: {
+          '0%': {
+            transform: 'translateX(100%)'
+          },
+          '100%': {
+            transform: 'translateX(-100%)'
+          }
         }
       },
       animation: {
         puzzle: 'puzzle 1s ease-out forwards',
         pivotPuzzle: 'pivotPuzzle 2s ease-out forwards',
-        translateX: 'translateX 0.9s ease-out forwards'
+        translateX: 'translateX 0.9s ease-out forwards',
+        runMarquee: 'marquee 7s linear infinite'
       }
     }
   },
