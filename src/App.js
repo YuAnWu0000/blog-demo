@@ -4,7 +4,8 @@ import '@/App.css'
 // import MyButton from '@/components/cssFramework/ButtonCssProp'
 // import MyButton from '@/components/cssFramework/ButtonTailwind'
 // import BandCircle from '@/components/bandCircle/BandCircle'
-import RamenPuzzle from '@/components/ramenPuzzle/RamenPuzzle'
+// import RamenPuzzle from '@/components/ramenPuzzle/RamenPuzzle'
+import Marquee from '@/components/marquee/Marquee'
 
 function App() {
   return (
@@ -40,7 +41,8 @@ function App() {
         className="text-blue-500 bg-red-500 block"
       /> */}
       {/* <BandCircle /> */}
-      <RamenPuzzle />
+      {/* <RamenPuzzle /> */}
+      <Marquee />
     </div>
   )
 }
