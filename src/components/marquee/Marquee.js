@@ -1,33 +1,47 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
+
+const RUN_ONCE_TIME = 4
 
 function Marquee() {
+  const marqueeEl = useRef(null)
   const [marqueeText, setMarqueeText] = useState(
-    '跑馬燈1跑馬燈2跑馬燈3跑馬燈4跑馬燈5跑馬燈6跑馬燈7跑馬燈8跑馬燈9跑馬燈10'
+    '跑馬燈1跑馬燈2跑馬燈3跑馬燈4跑馬燈5跑馬燈6跑馬燈7跑馬燈8跑馬燈9跑馬燈1跑馬燈2跑馬燈3跑馬燈4跑馬燈5跑馬燈6跑馬燈7跑馬燈8跑馬燈9'
   )
   const [marqueeLengthRatio, setMarqueeLengthRatio] = useState(100)
-  const [marqueetime, setMarqueeTime] = useState(0)
+  const [marqueeTime, setMarqueeTime] = useState(0)
 
-  function checkMarquee(el, type) {
+  function checkMarquee(el) {
     const clientWidth = el.clientWidth
     const scrollWidth = el.scrollWidth
     const ratio = Math.round((scrollWidth / clientWidth) * 100)
     setMarqueeLengthRatio(ratio)
-    setMarqueeTime(Math.round((ratio + 100) * 10) / 100)
+    setMarqueeTime(Math.round((ratio + 100) * RUN_ONCE_TIME) / 100)
+    console.log(clientWidth, scrollWidth)
   }
 
   useEffect(() => {
-    checkMarquee()
+    checkMarquee(marqueeEl.current)
   }, [marqueeText])
 
   return (
     <div
+      ref={marqueeEl}
       className="relative top-[10rem] left-[30rem] right-[30rem] w-[calc(100vw-60rem)] h-[4.2rem]
         text-primary text-center italic
         [text-shadow:2px_2px_0px_#ffffff,_0_0_4px_#0f6513] whitespace-nowrap
         [line-height:4.2rem] text-4xl overflow-hidden translate-x-0 border-gray-800
         bg-gray-200"
     >
-      <p className="w-full animate-runMarquee"></p>
+      <p
+        style={{
+          '--startPosition': '100%',
+          '--endPosition': `-${marqueeLengthRatio}%`,
+          '--marqueeTime': `${marqueeTime}s`
+        }}
+        className="max-w-full animate-runMarquee"
+      >
+        {marqueeText}
+      </p>
     </div>
   )
 }
