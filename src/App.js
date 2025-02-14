@@ -6,6 +6,7 @@ import '@/App.css'
 // import BandCircle from '@/components/bandCircle/BandCircle'
 // import RamenPuzzle from '@/components/ramenPuzzle/RamenPuzzle'
 import Marquee from '@/components/marquee/Marquee'
+import Notification from './components/notification/Notification'
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
       {/* <BandCircle /> */}
       {/* <RamenPuzzle /> */}
       <Marquee />
+      <Notification />
     </div>
   )
 }
