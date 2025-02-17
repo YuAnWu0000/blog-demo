@@ -37,7 +37,6 @@ function Marquee() {
             '--endPosition': `-${marqueeLengthRatio * 100}%`,
             '--marqueeTime': `${marqueeTime}s`
           }}
-          // className="translate-x-[var(--startPosition)]"
           className="animate-runMarquee"
         >
           {marqueeText}
