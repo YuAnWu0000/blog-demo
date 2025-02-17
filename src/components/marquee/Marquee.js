@@ -5,15 +5,15 @@ const RUN_ONCE_TIME = 4
 function Marquee() {
   const marqueeEl = useRef(null)
   const [marqueeText, setMarqueeText] = useState('跑馬燈1跑馬燈2跑馬燈3跑馬燈4')
-  const [marqueeLengthRatio, setMarqueeLengthRatio] = useState(100)
+  const [marqueeLengthRatio, setMarqueeLengthRatio] = useState(1)
   const [marqueeTime, setMarqueeTime] = useState(0)
 
   function checkMarquee(el) {
     const clientWidth = el.clientWidth
     const scrollWidth = el.scrollWidth
-    const ratio = Math.round((scrollWidth / clientWidth) * 100)
+    const ratio = Math.round(scrollWidth / clientWidth)
     setMarqueeLengthRatio(ratio)
-    setMarqueeTime(Math.round((ratio + 100) * RUN_ONCE_TIME) / 100)
+    setMarqueeTime(Math.round((ratio + 1) * RUN_ONCE_TIME))
     console.log(clientWidth, scrollWidth)
   }
 
@@ -34,10 +34,11 @@ function Marquee() {
         <p
           style={{
             '--startPosition': '100%',
-            '--endPosition': `-${marqueeLengthRatio}%`,
+            '--endPosition': `-${marqueeLengthRatio * 100}%`,
             '--marqueeTime': `${marqueeTime}s`
           }}
-          className="translate-x-[var(--startPosition)]"
+          // className="translate-x-[var(--startPosition)]"
+          className="animate-runMarquee"
         >
           {marqueeText}
         </p>
