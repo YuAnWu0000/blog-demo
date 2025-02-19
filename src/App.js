@@ -1,6 +1,6 @@
 import '@/App.css'
 // import MyButton from '@/components/cssFramework/ButtonCssModule'
-// import MyButton from '@/components/cssFramework/ButtonStyledComponent'
+import MyButton from '@/components/cssFramework/ButtonStyledComponent'
 // import MyButton from '@/components/cssFramework/ButtonCssProp'
 // import MyButton from '@/components/cssFramework/ButtonTailwind'
 // import BandCircle from '@/components/bandCircle/BandCircle'
@@ -10,29 +10,29 @@ import Marquee from '@/components/marquee/Marquee'
 
 function App() {
   return (
-    <div className="h-screen bg-[url('/images/cat.jpg')] bg-contain bg-repeat bg-none">
+    <div className="h-screen bg-[url('/images/cat.jpg')] bg-contain bg-repeat bg-none p-6">
       {/* CSS module */}
       {/* <MyButton
         variant="primary"
         size="big"
         status="disable"
-        isHidden={true}
+        // isHidden={true}
         color="yellow"
         className="button-special"
       /> */}
       {/* css-in-js */}
-      {/* <MyButton
+      <MyButton
         variant="primary"
         size="big"
         isDisable={false}
         isHidden={true}
         color="yellow"
         className={{
-          color: 'blue',
-          backgroundColor: 'red',
+          backgroundColor: '#2196f3',
+          color: 'white',
           display: 'block'
         }}
-      /> */}
+      />
       {/* Tailwind CSS */}
       {/* <MyButton
         variant="primary"
