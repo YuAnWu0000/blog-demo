@@ -1,8 +1,8 @@
 import '@/App.css'
 // import MyButton from '@/components/cssFramework/ButtonCssModule'
-import MyButton from '@/components/cssFramework/ButtonStyledComponent'
+// import MyButton from '@/components/cssFramework/ButtonStyledComponent'
 // import MyButton from '@/components/cssFramework/ButtonCssProp'
-// import MyButton from '@/components/cssFramework/ButtonTailwind'
+import MyButton from '@/components/cssFramework/ButtonTailwind'
 // import BandCircle from '@/components/bandCircle/BandCircle'
 // import RamenPuzzle from '@/components/ramenPuzzle/RamenPuzzle'
 import Marquee from '@/components/marquee/Marquee'
@@ -17,11 +17,11 @@ function App() {
         size="big"
         status="disable"
         // isHidden={true}
-        color="yellow"
-        className="button-special"
+        // color="yellow"
+        className="button-custom"
       /> */}
       {/* css-in-js */}
-      <MyButton
+      {/* <MyButton
         variant="primary"
         size="big"
         isDisable={false}
@@ -32,15 +32,15 @@ function App() {
           color: 'white',
           display: 'block'
         }}
-      />
+      /> */}
       {/* Tailwind CSS */}
-      {/* <MyButton
+      <MyButton
         variant="primary"
         size="big"
         isDisable={false}
         isHidden={true}
-        className="text-blue-500 bg-red-500 block"
-      /> */}
+        className="text-white bg-[#2196f3] block"
+      />
       {/* <BandCircle /> */}
       {/* <RamenPuzzle /> */}
       <Marquee />

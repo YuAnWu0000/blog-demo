@@ -3,15 +3,16 @@ import { twMerge } from 'tailwind-merge'
 
 const MyButton = ({ variant, size, isDisable, isHidden, color, className }) => {
   const defaultStyles =
-    'w-[120px] h-[30px] text-base font-medium text-white bg-black border border-solid'
+    'w-[120px] h-[30px] text-[18px] text-center font-medium border border-solid shadow-[rgba(0,0,0,0.1)_2px_2px_5px,rgba(0,0,0,0.1)_1px_1px_3px]'
   const variantStyles = {
-    primary: 'bg-green-500 font-medium border-white rounded-lg',
+    primary:
+      'text-[#313934] bg-[#d3a326] font-medium border-white rounded-[8px]',
     warning: 'bg-orange-500 font-medium border-white rounded-lg',
     error: 'bg-red-500 font-medium border-white rounded-lg'
   }
   const sizeStyles = {
-    big: 'w-[200px] h-[50px] text-lg',
-    small: 'w-[100px] h-[20px] text-sm'
+    big: 'w-[200px] h-[50px] !leading-[50px] text-lg',
+    small: 'w-[100px] h-[20px] !leading-[20px] text-sm'
   }
   const disableStyles = 'bg-gray-500 pointer-events-none'
   let totalStyles = twMerge(

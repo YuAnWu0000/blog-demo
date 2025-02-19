@@ -5,10 +5,11 @@ import PropTypes from 'prop-types'
 const buttonDefaultCSS = {
   width: '120px',
   height: '30px',
-  fontSize: '14px',
+  fontSize: '18px',
   fontWeight: 500,
-  color: 'white',
-  backgroundColor: 'black'
+  textAlign: 'center',
+  lineHeight: '30px',
+  boxShadow: 'rgba(0, 0, 0, 0.1) 2px 2px 5px, rgba(0, 0, 0, 0.1) 1px 1px 3px'
 }
 const variantButtonCSS = {
   primary: {
@@ -21,7 +22,8 @@ const variantButtonCSS = {
 const sizeButtonCSS = {
   big: {
     width: '200px',
-    height: '50px'
+    height: '50px',
+    lineHeight: '50px'
   }
 }
 const disableCSS = {
